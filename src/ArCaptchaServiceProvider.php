@@ -66,7 +66,7 @@ class ArCaptchaServiceProvider extends ServiceProvider
             return '<?php echo ArCaptcha::getScript()?>';
         });
         Blade::directive('arcaptchaWidget', function ($options) {
-            return "<?php echo ArCaptcha::getWidget(${options})?>";
+            return "<?php echo ArCaptcha::getWidget({$options})?>";
         });
     }
 }
